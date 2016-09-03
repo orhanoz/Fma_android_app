@@ -35,13 +35,13 @@ public class KayitActivity extends AppCompatActivity implements View.OnClickList
 
         String email= ((EditText) findViewById(R.id.email)).getText().toString();
         String password = ((EditText) findViewById(R.id.password)).getText().toString();
-        String passwordComfirmation= ((EditText) findViewById(R.id.passwordComfirmation)).getText().toString();
+        String passwordConfirmation= ((EditText) findViewById(R.id.passwordConfirmation)).getText().toString();
 
         switch (v.getId()){
 
             case R.id.kayitOl:
 
-                if(password.equals(passwordComfirmation) && email.contains("@")){
+                if(password.equals(passwordConfirmation) && email.contains("@")){
 
                     Toast.makeText(getApplicationContext(),"Mail Gönderildi",Toast.LENGTH_LONG).show();
                     //TODO bilgiler servera gönderilir activation link mail atilir...
