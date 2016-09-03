@@ -23,8 +23,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
 
-
-
     }
 
     @Override
