@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
@@ -33,10 +34,6 @@ public class CihazKurulumActivity extends AppCompatActivity {
     String wifis[];
     WifiScanReceiver wifiReceiver;
     ListView lv;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,8 +78,9 @@ public class CihazKurulumActivity extends AppCompatActivity {
                                 break;
                             }
                         }
-
                         dialog.dismiss();
+
+                        Toast.makeText(getApplicationContext(),wifiManager.getConnectionInfo().getSSID().toString(),Toast.LENGTH_LONG).show();
                     }
                 });
                 builder.setNegativeButton("Vazgeç", new DialogInterface.OnClickListener() {
