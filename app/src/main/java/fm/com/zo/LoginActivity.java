@@ -12,29 +12,34 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        this.setContentView(R.layout.activity_login);
 
         //button declaration
-        Button btn=(Button) findViewById(R.id.button);
-        Button btn2=(Button) findViewById(R.id.button2);
-        Button btn3=(Button) findViewById(R.id.button3);
-        btn.setOnClickListener(this);
-        btn2.setOnClickListener(this);
-        btn3.setOnClickListener(this);
+        Button girisYap=(Button) findViewById(R.id.girisYap);
+        Button kayitOl=(Button) findViewById(R.id.kayitOl);
+        Button passwordConf=(Button) findViewById(R.id.passwordConfirmation);
+
+        // listener Initialization
+        girisYap.setOnClickListener(this);
+        kayitOl.setOnClickListener(this);
+        passwordConf.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
+
         //edit text declaration
-        EditText edt=(EditText) findViewById(R.id.editText);
-        EditText edt2=(EditText) findViewById(R.id.editText2);
+        String email= ((EditText) findViewById(R.id.email)).getText().toString();
+        String password=((EditText) findViewById(R.id.password)).getText().toString();
+
         switch(v.getId()){
             case R.id.button:
                 //login button
                 //TODO server ile connection ve kullanıcı adı parola kontrolü
-                if(edt.getText().toString().equals("admin")&& edt2.getText().toString().equals("admin")){
+                if(email.equals("admin")&& password.equals("admin")){
                     //verified go to 2 activity
                     Toast.makeText(getApplicationContext(),"Hoşgeldiniz",Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(getApplicationContext(),MainMenu.class);

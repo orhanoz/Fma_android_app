@@ -60,10 +60,9 @@ public class KayitActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
             default:
-                System.out.println("not a valid component id");
+                System.out.println("not a valid ID ");
                 break;
 
         }
-
     }
 }

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/email"
         android:hint="E-mail"/>
 
     <EditText
@@ -23,24 +23,24 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/password"
         android:hint="Parola"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Giriş yap"
-        android:id="@+id/button" />
+        android:id="@+id/girisYap" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kayıt ol"
-        android:id="@+id/button2" />
+        android:id="@+id/kayitOl" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Parola hatırlatma"
-        android:id="@+id/button3" />
+        android:id="@+id/passwordConfirmation" />
 </LinearLayout>
