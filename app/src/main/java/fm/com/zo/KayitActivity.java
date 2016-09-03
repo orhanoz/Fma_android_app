@@ -14,38 +14,56 @@ public class KayitActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kayit);
 
         //button declaration
-        Button btn4=(Button) findViewById(R.id.button4);
-        Button btn5=(Button) findViewById(R.id.button5);
-        btn4.setOnClickListener(this);
-        btn5.setOnClickListener(this);
+        Button kayitOl =(Button) findViewById(R.id.kayitOl);
+        Button parolaHatirlama =(Button) findViewById(R.id.parolaHatirlama);
+
+        // adding listeners
+        kayitOl.setOnClickListener(this);
+        parolaHatirlama.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
-        EditText edt3=(EditText) findViewById(R.id.editText3);
-        EditText edt4=(EditText) findViewById(R.id.editText4);
-        EditText edt5=(EditText) findViewById(R.id.editText5);
+
+
+        String email= ((EditText) findViewById(R.id.email)).getText().toString();
+        String password = ((EditText) findViewById(R.id.password)).getText().toString();
+        String passwordComfirmation= ((EditText) findViewById(R.id.passwordComfirmation)).getText().toString();
+
         switch (v.getId()){
-            case R.id.button4:
-                //kayit tamam
-                if(edt4.getText().toString().equals(edt5.getText().toString())&& edt3.getText().toString().contains("@")){
+
+            case R.id.kayitOl:
+
+                if(password.equals(passwordComfirmation) && email.contains("@")){
+
                     Toast.makeText(getApplicationContext(),"Mail Gönderildi",Toast.LENGTH_LONG).show();
                     //TODO bilgiler servera gönderilir activation link mail atilir...
                     break;
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"Hata",Toast.LENGTH_LONG).show();
                     break;
                 }
-            case R.id.button5:
-                //parola hatirlatma
-                Intent intent3=new Intent(getApplicationContext(),HatirlatmaActivity.class);
-                startActivity(intent3);
+
+            case R.id.parolaHatirlama:
+
+                // hatirlatma activity baslat
+                startActivity( new Intent(getApplicationContext(),HatirlatmaActivity.class) );
                 break;
+
+            default:
+                System.out.println("not a valid component id");
+                break;
+
         }
+
     }
 }
