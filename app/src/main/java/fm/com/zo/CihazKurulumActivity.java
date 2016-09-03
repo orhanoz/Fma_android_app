@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,10 +35,6 @@ public class CihazKurulumActivity extends AppCompatActivity {
     String wifis[];
     WifiScanReceiver wifiReceiver;
     ListView lv;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +52,7 @@ public class CihazKurulumActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), parent.getAdapter().getItem(position).toString(), Toast.LENGTH_LONG).show();
                 final String ssid = parent.getAdapter().getItem(position).toString();
                 final String[] passwd = {""};
+                final String[] ssidCheck = {""};
                 AlertDialog.Builder builder = new AlertDialog.Builder(CihazKurulumActivity.this);
                 builder.setTitle("Ağ");
                 builder.setMessage("Seçtiğiniz ağ için parola giriniz");
@@ -81,8 +80,42 @@ public class CihazKurulumActivity extends AppCompatActivity {
                                 break;
                             }
                         }
-
                         dialog.dismiss();
+                        ssidCheck[0] =wifiManager.getConnectionInfo().getSSID().toString();
+                        Toast.makeText(getApplicationContext(),wifiManager.getConnectionInfo().getSSID().toString(),Toast.LENGTH_LONG).show();
+                        if(ssidCheck[0].equals(ssid)){
+                            AlertDialog.Builder builder2 = new AlertDialog.Builder(CihazKurulumActivity.this);
+                            builder2.setTitle("Ağ Bilgileri");
+                            builder2.setMessage("Ev ağınızın adını ve parolasını giriniz");
+                            LinearLayout layout = new LinearLayout(CihazKurulumActivity.this);
+                            layout.setOrientation(LinearLayout.VERTICAL);
+                            builder2.setIcon(android.R.drawable.ic_dialog_info);
+                            final EditText input1 = new EditText(CihazKurulumActivity.this);
+                            final EditText input2 = new EditText(CihazKurulumActivity.this);
+                            input1.setHint("Ağ ismi");
+                            input1.setInputType(InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_NORMAL);
+                            layout.addView(input1);
+                            input2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                            layout.addView(input2);
+                            builder2.setView(layout);
+                            builder2.setCancelable(false);
+                            builder2.setPositiveButton("Tamam", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //TODO tcp yada istenen yöntem ile alinan veri gönderilecek
+                                    Toast.makeText(getApplicationContext(),input1.getText().toString(),Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),input2.getText().toString(),Toast.LENGTH_LONG).show();
+                                    dialog.dismiss();
+                                }
+                            });
+                            builder2.setNegativeButton("Vazgeç", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
+                            builder2.create().show();
+                        }
                     }
                 });
                 builder.setNegativeButton("Vazgeç", new DialogInterface.OnClickListener() {

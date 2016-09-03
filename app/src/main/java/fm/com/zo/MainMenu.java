@@ -23,9 +23,13 @@ public class MainMenu extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
-        int id = item.getItemId();
-        if(id==R.id.cihaz_kurulum){
+        if(item.getItemId()==R.id.cihaz_kurulum){
             Intent intent=new Intent(getApplicationContext(),CihazKurulumActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else if(item.getItemId()==R.id.ev_ekle){
+            Intent intent=new Intent(getApplicationContext(),EvEkleActivity.class);
             startActivity(intent);
             return true;
         }
