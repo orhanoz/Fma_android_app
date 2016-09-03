@@ -28,6 +28,11 @@ public class MainMenu extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        else if(item.getItemId()==R.id.ev_ekle){
+            Intent intent=new Intent(getApplicationContext(),EvEkleActivity.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }

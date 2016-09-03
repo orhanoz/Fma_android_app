@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Zo</string>
+    <string name="title_activity_ev_ekle">EvEkleActivity</string>
 </resources>
