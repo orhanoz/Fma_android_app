@@ -78,10 +78,10 @@ public class CihazKurulumActivity extends AppCompatActivity {
                                 wifiManager.disconnect();
                                 wifiManager.enableNetwork(i.networkId, true);
                                 wifiManager.reconnect();
-
                                 break;
                             }
                         }
+
                         dialog.dismiss();
                     }
                 });
