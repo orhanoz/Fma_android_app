@@ -46,7 +46,6 @@
         android:text="Parola hatırlatma"
         android:background="@drawable/buttonnew"
         android:textColor="#000203"
-        android:textSize="30sp"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
