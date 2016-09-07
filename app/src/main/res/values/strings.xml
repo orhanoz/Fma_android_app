@@ -6,4 +6,7 @@
     <string name="kayitol">Kayit ol</string>
     <string name="parolahatirlatma">Parola hatirlatma</string>
 
+    <string name="closeDrawer">Navigation View</string>
+    <string name="openDrawer">Navigation View Closed</string>
+
 </resources>
