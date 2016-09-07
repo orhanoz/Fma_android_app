@@ -60,27 +60,12 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
-        android:layout_width="135dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="24dp"
-        android:layout_marginTop="24dp"
-        android:padding="12dp"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:background="#333"
+        style="@style/fmaButton"
         android:text="Kayıt ol"
         android:id="@+id/kayitOl" />
 
     <android.support.v7.widget.AppCompatButton
-        android:layout_width="180dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="24dp"
-        android:padding="12dp"
-        android:textAlignment="center"
-        android:textColor="#fff"
-        android:background="#333"
+        style="@style/fmaParolaHatirlatmaButton"
         android:text="Parola hatırlatma"
         android:id="@+id/parolaHatirlama" />
 </LinearLayout>
