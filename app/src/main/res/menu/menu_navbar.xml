@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_home"
+            android:checked="true"
+            android:orderInCategory="97"
+            android:title="Ev ekle"/>
+
+        <item
+            android:id="@+id/drawer_cihaz_kurulum"
+            android:orderInCategory="98"
+            android:title="Cihaz kurulum"/>
+
+        <item
+            android:id="@+id/drawer_ayarlar"
+            android:orderInCategory="99"
+            android:title="Ayarlar"/>
+
+    </group>
+</menu>
