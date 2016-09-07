@@ -6,14 +6,4 @@
     <solid
         android:color="#25852F"
         />
-    <padding
-        android:left="0dp"
-        android:top="0dp"
-        android:right="0dp"
-        android:bottom="0dp"
-        />
-    <size
-        android:width="180dp"
-        android:height="60dp"
-        />
 </shape>

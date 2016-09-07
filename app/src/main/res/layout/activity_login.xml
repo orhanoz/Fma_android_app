@@ -9,47 +9,64 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fm.com.zo.LoginActivity"
     android:orientation="vertical"
-    android:background="#39d171">
+    android:background="#000">
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/email"
-        android:layout_marginBottom="10dp"
-        android:hint="E-mail"/>
+        android:hint="E-posta"/>
+    </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/password"
-        android:layout_marginBottom="10dp"
         android:hint="Parola"/>
+    </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="135dp"
+        android:layout_height="49dp"
         android:text="Giriş yap"
         android:background="@drawable/buttonnew"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/girisYap" />
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:id="@+id/girisYap"
+        android:textAlignment="center"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="135dp"
+        android:layout_height="49dp"
         android:text="Kayıt ol"
-        android:background="@drawable/buttonnew"
-        android:layout_marginBottom="10dp"
+        android:textColor="#fff"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:textAlignment="center"
         android:id="@+id/kayitOl" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="180dp"
+        android:layout_height="49dp"
         android:text="Parola hatırlatma"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/buttonnew"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:textAlignment="center"
         android:id="@+id/passwordConfirmation" />
 </LinearLayout>
