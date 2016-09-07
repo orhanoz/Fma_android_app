@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password=((EditText) findViewById(R.id.password)).getText().toString();
 
         switch(v.getId()){
-            case R.id.button:
+            case R.id.girisYap:
                 //login button
                 //TODO server ile connection ve kullanıcı adı parola kontrolü
                 if(email.equals("admin")&& password.equals("admin")){
@@ -50,12 +50,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(getApplicationContext(),"Hatalı kullanıcı adı ve parola",Toast.LENGTH_LONG).show();
                     break;
                 }
-            case R.id.button2:
+            case R.id.kayitOl:
                 //kayit button
                 Intent intent2=new Intent(getApplicationContext(),KayitActivity.class);
                 startActivity(intent2);
                 break;
-            case R.id.button3:
+            case R.id.parolaHatirlama:
                 //parola hatirlat
                 Intent intent3=new Intent(getApplicationContext(),HatirlatmaActivity.class);
                 startActivity(intent3);
