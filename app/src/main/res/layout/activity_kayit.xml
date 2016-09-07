@@ -7,42 +7,80 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#076"
     tools:context="fm.com.zo.KayitActivity"
     android:orientation="vertical">
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/email"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:textColor="#fff"
         android:hint="E-mail"/>
+    </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:textColor="#fff"
         android:id="@+id/password"
         android:hint="Parola"/>
+        </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#fff"
         android:inputType="textPassword"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:id="@+id/passwordConfirmation"
         android:hint="Parola"/>
+    </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="135dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:background="#333"
         android:text="Kayıt ol"
         android:id="@+id/kayitOl" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="180dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:background="#333"
         android:text="Parola hatırlatma"
         android:id="@+id/parolaHatirlama" />
 </LinearLayout>
