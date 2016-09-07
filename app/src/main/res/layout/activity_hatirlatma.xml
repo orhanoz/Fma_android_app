@@ -23,11 +23,11 @@
             android:ems="10"
             android:id="@+id/editText6"
             android:textColor="#fff"
-            android:hint="E-posta"/>
+            android:hint="@string/eposta"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
         style="@style/fmaButton"
-        android:text="Gönder"
-        android:id="@+id/button6" />
+        android:text="@string/girisyap"
+        android:id="@+id/login" />
 </LinearLayout>

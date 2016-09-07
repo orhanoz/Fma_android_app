@@ -25,7 +25,7 @@
         android:layout_marginBottom="24dp"
         android:layout_marginTop="24dp"
         android:textColor="#fff"
-        android:hint="E-mail"/>
+        android:hint="@string/eposta"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -40,7 +40,7 @@
         android:ems="10"
         android:textColor="#fff"
         android:id="@+id/password"
-        android:hint="Parola"/>
+        android:hint="@string/parola"/>
         </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -56,16 +56,16 @@
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:id="@+id/passwordConfirmation"
-        android:hint="Parola"/>
+        android:hint="@string/parola"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
         style="@style/fmaButton"
-        android:text="Kayıt ol"
+        android:text="@string/kayitol"
         android:id="@+id/kayitOl" />
 
     <android.support.v7.widget.AppCompatButton
         style="@style/fmaParolaHatirlatmaButton"
-        android:text="Parola hatırlatma"
+        android:text="@string/parolahatirlatma"
         android:id="@+id/parolaHatirlama" />
 </LinearLayout>
