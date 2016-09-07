@@ -32,10 +32,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
 
-        //edit text declaration
-        String email= ((EditText) findViewById(R.id.email)).getText().toString();
-        String password=((EditText) findViewById(R.id.password)).getText().toString();
-
         switch(v.getId()){
             case R.id.girisYap:
                 //login button
@@ -45,6 +41,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressDialog.setIndeterminate(true);
                 progressDialog.setMessage("Doğrulanıyor...");
                 progressDialog.show();
+
+                //edit text declaration
+                String email= ((EditText) findViewById(R.id.email)).getText().toString();
+                String password=((EditText) findViewById(R.id.password)).getText().toString();
+
                 if(email.equals("admin")&& password.equals("admin")){
                     //verified go to 2 activity
                     Toast.makeText(getApplicationContext(),"Hoşgeldiniz",Toast.LENGTH_LONG).show();
@@ -53,6 +54,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     break;
                 }
                 else{
+                    progressDialog.dismiss();
                     Toast.makeText(getApplicationContext(),"Hatalı kullanıcı adı ve parola",Toast.LENGTH_LONG).show();
                     break;
                 }
