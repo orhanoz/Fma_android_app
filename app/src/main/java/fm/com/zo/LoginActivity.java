@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //button declaration
         Button girisYap=(Button) findViewById(R.id.girisYap);
         Button kayitOl=(Button) findViewById(R.id.kayitOl);
-        Button passwordConf=(Button) findViewById(R.id.parolaHatirlatma);
+        Button passwordConf=(Button) findViewById(R.id.parolaHatirlama);
 
         // listener Initialization
         girisYap.setOnClickListener(this);
@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 Intent intent2=new Intent(getApplicationContext(),KayitActivity.class);
                 startActivity(intent2);
                 break;
-            case R.id.parolaHatirlatma:
+            case R.id.parolaHatirlama:
                 //parola hatirlat
                 Intent intent3=new Intent(getApplicationContext(),HatirlatmaActivity.class);
                 startActivity(intent3);

@@ -51,7 +51,7 @@
     <android.support.v7.widget.AppCompatButton
         style="@style/fmaParolaHatirlatmaButton"
         android:text="@string/parolahatirlatma"
-        android:id="@+id/passwordConfirmation" />
+        android:id="@+id/parolaHatirlama" />
 
 
 </LinearLayout>
