@@ -23,7 +23,9 @@ public class HatirlatmaActivity extends AppCompatActivity implements View.OnClic
         EditText edt6=(EditText) findViewById(R.id.editText6);
         if(v.getId()==R.id.login){
             //Todo recovery maili atilacak
-            Toast.makeText(getApplicationContext(),"Mail gönderildi",Toast.LENGTH_LONG).show();
+            if(edt6.getText().toString().contains("@")) {
+                Toast.makeText(getApplicationContext(), "Mail gönderildi", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }
