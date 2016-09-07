@@ -1,5 +1,6 @@
 package fm.com.zo;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,6 +40,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.girisYap:
                 //login button
                 //TODO server ile connection ve kullanıcı adı parola kontrolü
+                final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
+                        R.style.AppTheme_Dark_Dialog);
+                progressDialog.setIndeterminate(true);
+                progressDialog.setMessage("Doğrulanıyor...");
+                progressDialog.show();
                 if(email.equals("admin")&& password.equals("admin")){
                     //verified go to 2 activity
                     Toast.makeText(getApplicationContext(),"Hoşgeldiniz",Toast.LENGTH_LONG).show();
