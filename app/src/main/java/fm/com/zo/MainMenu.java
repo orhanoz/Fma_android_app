@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import fm.com.zo.weather.weatherActivity;
+
 /**
  * Created by root on 02.09.2016.
  */
@@ -20,6 +22,7 @@ public class MainMenu extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,11 @@ public class MainMenu extends AppCompatActivity {
                         Intent intent=new Intent(getApplicationContext(),CihazKurulumActivity.class);
                         startActivity(intent);
                         return true;
+                    case R.id.drawer_weather:
+                        Intent weatherIntent = new Intent(getApplicationContext(),weatherActivity.class);
+                        startActivity(weatherIntent);
+
+
                 }
                 return true;
             }
