@@ -28,6 +28,6 @@
 
     <android.support.v7.widget.AppCompatButton
         style="@style/fmaButton"
-        android:text="@string/girisyap"
-        android:id="@+id/login" />
+        android:text="@string/parolahatirlatma"
+        android:id="@+id/parolaHatirlatma" />
 </LinearLayout>

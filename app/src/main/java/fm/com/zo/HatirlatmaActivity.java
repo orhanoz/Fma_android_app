@@ -14,14 +14,14 @@ public class HatirlatmaActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hatirlatma);
         //button declaration
-        Button login=(Button) findViewById(R.id.login);
+        Button login=(Button) findViewById(R.id.parolaHatirlatma);
         login.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         EditText edt6=(EditText) findViewById(R.id.editText6);
-        if(v.getId()==R.id.login){
+        if(v.getId()==R.id.parolaHatirlatma){
             //Todo recovery maili atilacak
             if(edt6.getText().toString().contains("@")) {
                 Toast.makeText(getApplicationContext(), "Mail gönderildi", Toast.LENGTH_LONG).show();

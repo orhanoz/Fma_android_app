@@ -27,6 +27,10 @@
             android:id="@+id/drawer_weather"
             android:orderInCategory="100"
             android:title="@string/weather"/>
+        <item
+            android:id="@+id/drawer_map"
+            android:orderInCategory="100"
+            android:title="@string/map"/>
 
     </group>
 </menu>

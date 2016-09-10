@@ -62,6 +62,11 @@ public class MainMenu extends AppCompatActivity {
                     case R.id.drawer_weather:
                         Intent weatherIntent = new Intent(getApplicationContext(),weatherActivity.class);
                         startActivity(weatherIntent);
+                        return true;
+                    case R.id.drawer_map:
+                        Intent intentMap = new Intent(getApplicationContext(),MapsActivity.class);
+                        startActivity(intentMap);
+                        return true;
 
 
                 }
