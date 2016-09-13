@@ -52,8 +52,9 @@ public class MainMenu extends AppCompatActivity {
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
-                    case R.id.drawer_home:
-                        Toast.makeText(getApplicationContext(), "Inbox Selected", Toast.LENGTH_SHORT).show();
+                    case R.id.drawer_ev_ekle:
+                        Intent intentMap = new Intent(getApplicationContext(),MapsActivity.class);
+                        startActivity(intentMap);
                         return true;
                     case R.id.drawer_cihaz_kurulum:
                         Intent intent=new Intent(getApplicationContext(),CihazKurulumActivity.class);
@@ -63,10 +64,7 @@ public class MainMenu extends AppCompatActivity {
                         Intent weatherIntent = new Intent(getApplicationContext(),weatherActivity.class);
                         startActivity(weatherIntent);
                         return true;
-                    case R.id.drawer_map:
-                        Intent intentMap = new Intent(getApplicationContext(),MapsActivity.class);
-                        startActivity(intentMap);
-                        return true;
+
 
 
                 }

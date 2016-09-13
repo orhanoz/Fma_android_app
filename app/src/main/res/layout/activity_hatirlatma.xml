@@ -27,7 +27,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
-        style="@style/fmaButton"
+        style="@style/fmaParolaHatirlatmaButton"
         android:text="@string/parolahatirlatma"
         android:id="@+id/parolaHatirlatma" />
 </LinearLayout>

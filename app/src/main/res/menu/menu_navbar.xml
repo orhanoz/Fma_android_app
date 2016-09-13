@@ -8,7 +8,7 @@
         android:checkableBehavior="single">
 
         <item
-            android:id="@+id/drawer_home"
+            android:id="@+id/drawer_ev_ekle"
             android:checked="true"
             android:orderInCategory="97"
             android:title="Ev ekle"/>
