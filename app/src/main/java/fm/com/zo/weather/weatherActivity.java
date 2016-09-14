@@ -36,7 +36,7 @@ public class weatherActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.drawer_ayarlar) {
+        if (id == R.id.drawer_bildirimler) {
             return true;
         }
 

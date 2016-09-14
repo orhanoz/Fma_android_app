@@ -6,6 +6,26 @@
 
     <group
         android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_hedef_sicakliklar"
+            android:checked="true"
+            android:orderInCategory="5"
+            android:title="Hedef Sıcaklıklar"/>
+        <item
+            android:id="@+id/drawer_haftalikProg"
+            android:checked="true"
+            android:orderInCategory="10"
+            android:title="Haftalık Program"/>
+        <item
+            android:id="@+id/drawer_otomatikKontrol"
+            android:checked="true"
+            android:orderInCategory="15"
+            android:title="Otomatik Kontrol"/>
+        <item
+            android:id="@+id/drawer_kullanicilar"
+            android:checked="true"
+            android:orderInCategory="70"
+            android:title="Kullanıcılar"/>
 
         <item
             android:id="@+id/drawer_ev_ekle"
@@ -19,18 +39,14 @@
             android:title="Cihaz kurulum"/>
 
         <item
-            android:id="@+id/drawer_ayarlar"
+            android:id="@+id/drawer_bildirimler"
             android:orderInCategory="99"
-            android:title="Ayarlar"/>
+            android:title="Bildirimler"/>
 
         <item
             android:id="@+id/drawer_weather"
-            android:orderInCategory="100"
+            android:orderInCategory="50"
             android:title="@string/weather"/>
-        <item
-            android:id="@+id/drawer_map"
-            android:orderInCategory="100"
-            android:title="@string/map"/>
 
     </group>
 </menu>
