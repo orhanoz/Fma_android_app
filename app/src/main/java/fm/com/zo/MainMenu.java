@@ -64,8 +64,10 @@ public class MainMenu extends AppCompatActivity {
                         Intent weatherIntent = new Intent(getApplicationContext(),weatherActivity.class);
                         startActivity(weatherIntent);
                         return true;
-
-
+                    case R.id.drawer_hedef_sicakliklar:
+                        Intent sicaklikIntent=new Intent(getApplicationContext(),HedefSicaklikActivity.class);
+                        startActivity(sicaklikIntent);
+                        return true;
 
                 }
                 return true;
