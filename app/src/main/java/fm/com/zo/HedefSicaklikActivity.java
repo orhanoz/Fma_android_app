@@ -19,11 +19,14 @@ public class HedefSicaklikActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 100); // see this max value coming back here, we animale towards that value
+        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setProgress(30);
+
+        ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 100); // see this max value coming back here, we animate towards that value
         animation.setDuration (5000); //in milliseconds
         animation.setInterpolator (new DecelerateInterpolator());
         animation.start ();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +34,10 @@ public class HedefSicaklikActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 100); // see this max value coming back here, we animate towards that value
+                animation.setDuration (1000); //in milliseconds
+                animation.setInterpolator (new DecelerateInterpolator());
+                animation.start ();
 
             }
         });
