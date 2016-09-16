@@ -12,17 +12,17 @@
     tools:context="fm.com.zo.HedefSicaklikActivity"
     tools:showIn="@layout/activity_hedef_sicaklik"
     android:weightSum="1"
-    android:background="#777">
+    android:background="#fff">
 
     <ProgressBar
         android:id="@+id/progressBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/circular"
+        android:background="@drawable/circle_shape"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:max="500"
-        android:progress="0"
-        android:progressDrawable="@drawable/circular" />
+        android:max="100"
+        android:progress="65" />
 
 </LinearLayout>
