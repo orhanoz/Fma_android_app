@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
+import android.widget.SeekBar;
 
 public class HedefSicaklikActivity extends AppCompatActivity {
 
@@ -19,8 +20,8 @@ public class HedefSicaklikActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        progressBar.setProgress(30);
+        final SeekBar progressBar = (SeekBar) findViewById(R.id.progressBar);
+        progressBar.setProgress(10);
 
         ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 100); // see this max value coming back here, we animate towards that value
         animation.setDuration (5000); //in milliseconds
@@ -32,12 +33,6 @@ public class HedefSicaklikActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 100); // see this max value coming back here, we animate towards that value
-                animation.setDuration (1000); //in milliseconds
-                animation.setInterpolator (new DecelerateInterpolator());
-                animation.start ();
 
             }
         });
