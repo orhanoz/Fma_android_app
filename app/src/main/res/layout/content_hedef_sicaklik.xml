@@ -12,7 +12,8 @@
     tools:context="fm.com.zo.HedefSicaklikActivity"
     tools:showIn="@layout/activity_hedef_sicaklik"
     android:weightSum="1"
-    android:background="#fff">
+    android:background="#fff"
+    android:orientation="vertical">
 
     <android.support.v7.widget.AppCompatSeekBar
         android:id="@+id/progressBar"
@@ -25,5 +26,19 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:max="100"
         android:progress="65" />
+
+    <fm.com.zo.CircularSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:start_angle="270"
+        app:end_angle="270"
+        app:use_custom_radii="true"
+        app:progress="25"
+        app:max="100"
+        app:pointer_alpha_ontouch="100"
+        app:pointer_color="#0174DF"
+        app:pointer_halo_color="#880174DF"/>
+
 
 </LinearLayout>
