@@ -3,6 +3,14 @@
 
     <group
         android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawer_evler"
+            android:checked="true"
+            android:orderInCategory="1"
+            android:icon="@mipmap/ic_home_white_24dp"
+            android:title="Evler"/>
+
         <item
             android:id="@+id/drawer_hedef_sicakliklar"
             android:checked="true"
@@ -12,37 +20,44 @@
             android:id="@+id/drawer_haftalikProg"
             android:checked="true"
             android:orderInCategory="10"
+            android:icon="@mipmap/ic_date_range_white_24dp"
             android:title="Haftalık Program"/>
         <item
             android:id="@+id/drawer_otomatikKontrol"
             android:checked="true"
             android:orderInCategory="15"
+            android:icon="@mipmap/ic_map_white_24dp"
             android:title="Otomatik Kontrol"/>
         <item
             android:id="@+id/drawer_kullanicilar"
             android:checked="true"
             android:orderInCategory="70"
+            android:icon="@mipmap/ic_face_white_24dp"
             android:title="Kullanıcılar"/>
 
         <item
             android:id="@+id/drawer_ev_ekle"
             android:checked="true"
             android:orderInCategory="97"
+            android:icon="@mipmap/ic_add_location_white_24dp"
             android:title="Ev ekle"/>
 
         <item
             android:id="@+id/drawer_cihaz_kurulum"
             android:orderInCategory="98"
+            android:icon="@mipmap/ic_phonelink_setup_white_24dp"
             android:title="Cihaz kurulum"/>
 
         <item
             android:id="@+id/drawer_bildirimler"
             android:orderInCategory="99"
+            android:icon="@mipmap/ic_notifications_white_24dp"
             android:title="Bildirimler"/>
 
         <item
             android:id="@+id/drawer_weather"
             android:orderInCategory="50"
+            android:icon="@mipmap/ic_wb_sunny_white_24dp"
             android:title="@string/weather"/>
 
     </group>
