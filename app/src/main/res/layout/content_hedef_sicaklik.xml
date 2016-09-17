@@ -16,7 +16,7 @@
     android:orientation="vertical">
 
     <fm.com.zo.CircularSeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/seek_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:start_angle="270"
