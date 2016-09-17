@@ -600,7 +600,7 @@ public class CircularSeekBar extends View {
 
     /**
      * Set whether the pointer locks at zero and max or not.
-     * @param boolean value. True if the pointer should lock at zero and max, false if it should not.
+     * @param //boolean value. True if the pointer should lock at zero and max, false if it should not.
      */
     public void setLockEnabled(boolean lockEnabled) {
         this.lockEnabled = lockEnabled;
@@ -1041,7 +1041,7 @@ public class CircularSeekBar extends View {
 
     /**
      * Set whether user touch input is accepted or ignored.
-     * @param boolean value. True if user touch input is to be accepted, false if user touch input is to be ignored.
+     * @param //boolean value. True if user touch input is to be accepted, false if user touch input is to be ignored.
      */
     public void setIsTouchEnabled(boolean isTouchEnabled) {
         this.isTouchEnabled = isTouchEnabled;

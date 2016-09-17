@@ -15,18 +15,6 @@
     android:background="#fff"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatSeekBar
-        android:id="@+id/progressBar"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:indeterminate="false"
-        android:progressDrawable="@drawable/circular"
-        android:thumb="@drawable/thumb"
-        android:background="@drawable/circle_shape"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:max="100"
-        android:progress="65" />
-
     <fm.com.zo.CircularSeekBar
         android:id="@+id/seekBar"
         android:layout_width="wrap_content"
@@ -36,6 +24,8 @@
         app:use_custom_radii="true"
         app:progress="25"
         app:max="100"
+        app:circle_x_radius="100dp"
+        app:circle_y_radius="100dp"
         app:pointer_alpha_ontouch="100"
         app:pointer_color="#0174DF"
         app:pointer_halo_color="#880174DF"/>
