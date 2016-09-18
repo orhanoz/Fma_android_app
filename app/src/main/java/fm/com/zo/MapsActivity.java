@@ -36,6 +36,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMyLoca
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 
@@ -58,7 +59,6 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnMyLoca
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         mMap.setOnMyLocationButtonClickListener(this);
         enableMyLocation();
-
         }
 
 
